@@ -1,0 +1,258 @@
+@font1:18px;
+@font2:14px;
+@value:90px;
+@color:#ffffff;
+.borderT(@x:1px,@y:solid){
+    border-top:@x @y #000;
+}
+/*三角函数分装*/
+.triangle(top,@width:10px,@col:#316ff7){
+    border-width: @width;
+    border-color: @col transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+}
+.triangle(left,@width:10px,@col:#316ff7){
+    border-width: @width;
+    border-color: transparent @col transparent transparent;
+    border-style: dashed solid dashed dashed;
+}
+.triangle(bottom,@width:10px,@col:#316ff7){
+    border-width: @width;
+    border-color: transparent transparent @col transparent;
+    border-style: dashed dashed solid dashed;
+
+}
+.triangle(left,@width:10px,@col:#316ff7){
+    border-width: @width;
+    border-color: transparent transparent transparent @col;
+    border-style: dashed dashed dashed solid;
+}
+/*匹配模式附加代码*/
+.triangle(@_,@width:10px,@col:#316ff7){
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+/*三角函数分装*/
+.btom{
+   border-bottom: 1pxs solid #ccc;
+}
+weight{
+    font-weight: bold;
+}
+*{
+    margin: 0px;
+    right: 0px;
+}
+
+ul{
+    list-style: none;
+}
+body{
+    background: #f0f3f9;
+}
+a{
+    text-decoration: none;
+    color: #444;
+
+}
+
+header{
+    background-image: url(../img/log_bg.png);
+    height: @value;
+    img{
+        float: left;
+        height:60px;
+        margin-top:12px;
+    }
+    li a{
+        float: right;
+        margin: 30px 10px 0px 0px;
+        color:@color;
+    }
+}
+nav{
+    
+    ul{
+        background: @color;
+        height: 40px;
+        line-height: 40px;  
+    }
+    li{
+        float: left;
+        margin-right: 3px;
+    }
+}
+#container{
+    width: 1200px;
+    margin: 40px auto;
+   
+    #leftCent{
+        float: left;
+        
+        div{
+            width: 300px;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-radius: 10px;
+            background: @color;
+
+        }
+        li,p{
+            padding: 5px 10px;
+        }
+       
+        li{
+            margin-right: 40px;
+            padding: 5px 0px 10px 60px;
+            .borderT(1px,dashed );
+            cursor: pointer;
+        }
+        img{
+            margin-top: 5px;
+            height: 26px;
+            float: left;
+        }
+        h3{
+            display: inline-block;
+            margin-left: 5px;
+        }
+        span{
+            position: absolute;
+            left: 405px;
+        }
+        .s1{
+            top: 536px;
+            .triangle(bottom, 8px, #316ff7)
+        }
+        .s2{
+            top: 945px;
+            .triangle(top, 8px, #316ff7)
+        }
+        .s3{
+            top: 1015px;
+            .triangle(top,8px, #316ff7)
+        }
+        .blue{
+            background: #316ff7;
+            color: @color;
+        }
+        .s4{
+            top: 1076px;
+            .triangle(bottom,8px,#316ff7)
+        }
+    }
+
+    #rightCent{
+        width: 900px;
+        margin-left: 320px;
+        padding: 5px 20px;
+        border-radius: 8px;
+        background: @color;
+        height: 1400px;
+        
+        div{
+            
+        }
+        img{
+            margin-top: 11px;
+            height: 26px;
+            float: left;
+        }
+        h3{
+            display: inline-block;
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+        p{
+            border: none;
+            border-bottom: 1px solid #c5c5c5;
+            padding: 3px 0px;
+        }
+        .middle{
+            margin: 40px;
+            width: 850px;
+            height: 400px;
+        }
+        .odd{
+            width: 32px;
+            height: 36px;
+        }
+        
+        li{
+            float: left;
+            font-size: @font2;
+            margin-left: 30px;
+            line-height: 55px;
+        }
+        h4{
+            width: 95%;
+            padding:5px 20px ;
+            float: left;
+            background: #f0f3f9;
+        }
+        h2{
+            display: block;
+            padding: 120px 0px 40px 0px;
+            text-align: center;
+        }
+        .tab{
+            position: relative;
+            width: 600px;
+            height: 90px;
+            margin-left: 150px;
+            border: 1px solid #999;
+            .big{
+                width: 100px;
+            }
+            .biankuang{
+                position: relative;
+                top: 10px;  
+                li{
+                    width: 100px;
+                  background: red;
+                }
+            }
+        }
+
+
+        /*投保人信息*/
+        blockquote{
+            padding-top: 60px;
+            
+            span{
+                display: inline-block;
+                width: 10px;
+                height: 20px;
+                background: blue;
+                margin-right: 10px;
+            }
+            p{
+               padding-bottom: 20px;
+            }
+            div{
+                margin-left: 50px;
+                h3{
+                    margin-top: 10px;
+                }
+                p{
+                    margin-top:20px;
+                    border: none;
+                    font-size: @font2;
+                }
+            }
+            .column{
+                
+                display: table-cell;
+                ul{
+                    margin-top: 20px;
+                }
+                li{
+                    column-width: 350px;
+                    column-gap: 2;
+                    float: left;
+                }
+            }
+        }
+    }
+}
